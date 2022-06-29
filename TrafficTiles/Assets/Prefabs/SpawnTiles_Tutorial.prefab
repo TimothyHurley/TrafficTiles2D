@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6382064951873534484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6382064951873534487}
+  - component: {fileID: 1435971783381816559}
+  m_Layer: 0
+  m_Name: SpawnTiles_Tutorial
+  m_TagString: Spawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6382064951873534487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382064951873534484}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435971783381816559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382064951873534484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d5d4465d3075d4aafaf63b80c8f5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 6253006829937741818, guid: 551c187877102864b8ced77afa6872b4, type: 3}
+  - {fileID: 5375685063116213540, guid: ac5da0d52c99b7443b4889fe2f4623da, type: 3}
+  - {fileID: 5197442454473737465, guid: 0cb36d667d58c4a42872ab11bf46de2c, type: 3}
+  clones1: []
+  clones2: []
+  clones3: []
+  clones4: []
+  yRow: 0
+  tileVariant: 0
+  tilesToSpawn: 5
+  yDistance: 7
+  notGreenCount1: 6
+  notGreenCount2: 7
+  notGreenCount3: 6
+  notGreenCount4: 7
