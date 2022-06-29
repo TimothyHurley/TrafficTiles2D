@@ -13,6 +13,8 @@ TagManager:
   - 2
   - 3
   - 4
+  - Timer
+  - Score
   layers:
   - Default
   - TransparentFX

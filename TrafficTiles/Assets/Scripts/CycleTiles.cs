@@ -417,6 +417,10 @@ public class CycleTiles : MonoBehaviour
             clones4[i].GetComponent<MoveTiles>().MoveThisGameObject();
         }
 
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().IncreaseTimerValue();
+
+        GameObject.FindGameObjectWithTag("Score").GetComponent<PlayerScore>().IncreasePlayerScore();
+        
         clones1.RemoveAt(0);
         clones2.RemoveAt(0);
         clones3.RemoveAt(0);
