@@ -34,7 +34,11 @@ public class CycleTiles_Tutorial : MonoBehaviour
     public bool enableW = false; // Enables 'w' button when true.
     public bool enableS = false; // Enables 's' button when true.
 
+    public bool enableMoveColumns = false; // Enables MoveColumns function when true.
+
     public int elementsPerList = 5; // Maximum number of elements in a list.
+
+    public int moveColumnsAmount = 0; // Number of times MoveColumns function has been called.
     
     
     void Start()
@@ -215,8 +219,9 @@ public class CycleTiles_Tutorial : MonoBehaviour
         ReduceElementsInList();
         CheckTileColour();
 
-        if (green1 && green2 && green3 && green4)
+        if (enableMoveColumns && green1 && green2 && green3 && green4)
         {
+            moveColumnsAmount++;
             MoveColumns();
         }
     }
@@ -288,8 +293,9 @@ public class CycleTiles_Tutorial : MonoBehaviour
         ReduceElementsInList();
         CheckTileColour();
 
-        if (green1 && green2 && green3 && green4)
+        if (enableMoveColumns && green1 && green2 && green3 && green4)
         {
+            moveColumnsAmount++;
             MoveColumns();
         }
     }
@@ -341,8 +347,9 @@ public class CycleTiles_Tutorial : MonoBehaviour
         ReduceElementsInList();
         CheckTileColour();
 
-        if (green1 && green2 && green3 && green4)
+        if (enableMoveColumns && green1 && green2 && green3 && green4)
         {
+            moveColumnsAmount++;
             MoveColumns();
         }
     }
@@ -414,14 +421,28 @@ public class CycleTiles_Tutorial : MonoBehaviour
         ReduceElementsInList();
         CheckTileColour();
 
-        if (green1 && green2 && green3 && green4)
+        if (enableMoveColumns && green1 && green2 && green3 && green4)
         {
+            moveColumnsAmount++;
             MoveColumns();
         }
     }
 
     public void MoveColumns()
     {
+        if (moveColumnsAmount == 1)
+        {
+            enableA = false;
+            enableD = false;
+            enableW = false;
+            enableS = false;
+            enableMoveColumns = false;
+            
+            GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().NextLine();
+            GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().arrowRow1.gameObject.SetActive(true);
+            GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().arrowRow2.gameObject.SetActive(true);
+        }
+
         green1 = false;
         green2 = false;
         green3 = false;
@@ -435,7 +456,7 @@ public class CycleTiles_Tutorial : MonoBehaviour
             clones4[i].GetComponent<MoveTiles>().MoveThisGameObject();
         }
 
-        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().IncreaseTimerValue();
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().IncreaseTimerValue();
 
         GameObject.FindGameObjectWithTag("Score").GetComponent<PlayerScore>().IncreasePlayerScore();
         

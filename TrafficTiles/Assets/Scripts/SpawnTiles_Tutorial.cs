@@ -25,11 +25,30 @@ public class SpawnTiles_Tutorial : MonoBehaviour
 
     void Awake()
     {
+        //SpawnRedRow();
+        
         SpawnColumn1();
         SpawnColumn2();
         SpawnColumn3();
         SpawnColumn4();
     }
+
+    /*public void SpawnRedRow()
+    {
+        tileVariant = 0;
+
+        Vector2 spawnpoint1 = new Vector2(0, 0);
+        clones1.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+
+        Vector2 spawnpoint2 = new Vector2(6, 0);
+        clones2.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+
+        Vector2 spawnpoint3 = new Vector2(12, 0);
+        clones3.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+
+        Vector2 spawnpoint4 = new Vector2(18, 0);
+        clones4.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+    }*/
 
     public void SpawnColumn1()
     {
@@ -38,40 +57,48 @@ public class SpawnTiles_Tutorial : MonoBehaviour
             tileVariant = Random.Range(0, 3);
             Vector2 spawnpoint = new Vector2(0, i * yDistance + yRow);
 
-            if (tileVariant == 0)
+            if (i == 0)
             {
                 clones1.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                notGreenCount1++;
             }
 
-            if (tileVariant == 1)
+            else
             {
-                clones1.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                notGreenCount1++;
-            }
-
-            if (tileVariant == 2)
-            {
-                if (notGreenCount1 >= 7)
+                if (tileVariant == 0)
                 {
-                    clones1.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
-                    notGreenCount1 = 0;
+                    clones1.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                    notGreenCount1++;
                 }
 
-                else
+                if (tileVariant == 1)
                 {
-                    tileVariant = Random.Range(0, 2);
+                    clones1.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                    notGreenCount1++;
+                }
 
-                    if (tileVariant == 0)
+                if (tileVariant == 2)
+                {
+                    if (notGreenCount1 >= 7)
                     {
-                        clones1.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                        notGreenCount1++;
+                        clones1.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
+                        notGreenCount1 = 0;
                     }
 
-                    if (tileVariant == 1)
+                    else
                     {
-                        clones1.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                        notGreenCount1++;
+                        tileVariant = Random.Range(0, 2);
+
+                        if (tileVariant == 0)
+                        {
+                            clones1.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                            notGreenCount1++;
+                        }
+
+                        if (tileVariant == 1)
+                        {
+                            clones1.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                            notGreenCount1++;
+                        }
                     }
                 }
             }
@@ -85,40 +112,48 @@ public class SpawnTiles_Tutorial : MonoBehaviour
             tileVariant = Random.Range(0, 3);
             Vector2 spawnpoint = new Vector2(6, i * yDistance + yRow);
 
-            if (tileVariant == 0)
+            if (i == 0)
             {
                 clones2.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                notGreenCount2++;
             }
 
-            if (tileVariant == 1)
+            else
             {
-                clones2.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                notGreenCount2++;
-            }
-
-            if (tileVariant == 2)
-            {
-                if (notGreenCount2 >= 7)
+                if (tileVariant == 0)
                 {
-                    clones2.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
-                    notGreenCount2 = 0;
+                    clones2.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                    notGreenCount2++;
                 }
 
-                else
+                if (tileVariant == 1)
                 {
-                    tileVariant = Random.Range(0, 2);
+                    clones2.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                    notGreenCount2++;
+                }
 
-                    if (tileVariant == 0)
+                if (tileVariant == 2)
+                {
+                    if (notGreenCount2 >= 7)
                     {
-                        clones2.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                        notGreenCount2++;
+                        clones2.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
+                        notGreenCount2 = 0;
                     }
 
-                    if (tileVariant == 1)
+                    else
                     {
-                        clones2.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                        notGreenCount2++;
+                        tileVariant = Random.Range(0, 2);
+
+                        if (tileVariant == 0)
+                        {
+                            clones2.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                            notGreenCount2++;
+                        }
+
+                        if (tileVariant == 1)
+                        {
+                            clones2.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                            notGreenCount2++;
+                        }
                     }
                 }
             }
@@ -132,40 +167,48 @@ public class SpawnTiles_Tutorial : MonoBehaviour
             tileVariant = Random.Range(0, 3);
             Vector2 spawnpoint = new Vector2(12, i * yDistance + yRow);
 
-            if (tileVariant == 0)
+            if (i == 0)
             {
                 clones3.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                notGreenCount3++;
             }
 
-            if (tileVariant == 1)
+            else
             {
-                clones3.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                notGreenCount3++;
-            }
-
-            if (tileVariant == 2)
-            {
-                if (notGreenCount3 >= 7)
+                if (tileVariant == 0)
                 {
-                    clones3.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
-                    notGreenCount3 = 0;
+                    clones3.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                    notGreenCount3++;
                 }
 
-                else
+                if (tileVariant == 1)
                 {
-                    tileVariant = Random.Range(0, 2);
+                    clones3.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                    notGreenCount3++;
+                }
 
-                    if (tileVariant == 0)
+                if (tileVariant == 2)
+                {
+                    if (notGreenCount3 >= 7)
                     {
-                        clones3.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                        notGreenCount3++;
+                        clones3.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
+                        notGreenCount3 = 0;
                     }
 
-                    if (tileVariant == 1)
+                    else
                     {
-                        clones3.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                        notGreenCount3++;
+                        tileVariant = Random.Range(0, 2);
+
+                        if (tileVariant == 0)
+                        {
+                            clones3.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                            notGreenCount3++;
+                        }
+
+                        if (tileVariant == 1)
+                        {
+                            clones3.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                            notGreenCount3++;
+                        }
                     }
                 }
             }
@@ -179,40 +222,48 @@ public class SpawnTiles_Tutorial : MonoBehaviour
             tileVariant = Random.Range(0, 3);
             Vector2 spawnpoint = new Vector2(18, i * yDistance + yRow);
 
-            if (tileVariant == 0)
+            if (i == 0)
             {
                 clones4.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                notGreenCount4++;
             }
 
-            if (tileVariant == 1)
+            else
             {
-                clones4.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                notGreenCount4++;
-            }
-
-            if (tileVariant == 2)
-            {
-                if (notGreenCount4 >= 7)
+                if (tileVariant == 0)
                 {
-                    clones4.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
-                    notGreenCount4 = 0;
+                    clones4.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                    notGreenCount4++;
                 }
 
-                else
+                if (tileVariant == 1)
                 {
-                    tileVariant = Random.Range(0, 2);
+                    clones4.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                    notGreenCount4++;
+                }
 
-                    if (tileVariant == 0)
+                if (tileVariant == 2)
+                {
+                    if (notGreenCount4 >= 7)
                     {
-                        clones4.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
-                        notGreenCount4++;
+                        clones4.Add(Instantiate(tiles[2], spawnpoint, Quaternion.identity));
+                        notGreenCount4 = 0;
                     }
 
-                    if (tileVariant == 1)
+                    else
                     {
-                        clones4.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
-                        notGreenCount4++;
+                        tileVariant = Random.Range(0, 2);
+
+                        if (tileVariant == 0)
+                        {
+                            clones4.Add(Instantiate(tiles[0], spawnpoint, Quaternion.identity));
+                            notGreenCount4++;
+                        }
+
+                        if (tileVariant == 1)
+                        {
+                            clones4.Add(Instantiate(tiles[1], spawnpoint, Quaternion.identity));
+                            notGreenCount4++;
+                        }
                     }
                 }
             }

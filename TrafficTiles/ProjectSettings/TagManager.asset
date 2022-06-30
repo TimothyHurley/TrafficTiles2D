@@ -15,6 +15,7 @@ TagManager:
   - 4
   - Timer
   - Score
+  - Dialogue
   layers:
   - Default
   - TransparentFX

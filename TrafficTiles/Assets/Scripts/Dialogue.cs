@@ -8,10 +8,14 @@ public class Dialogue : MonoBehaviour
     public GameObject spawnTiles;
     public GameObject cycleTiles;
 
-    public Image arrow1;
-    public Image arrow2;
-    public Image arrow3;
-    public Image arrow4;
+    public Image arrow1; // Points to bottom tile in column 1.
+    public Image arrow2; // Points to bottom tile in column 2.
+    public Image arrow3; // Points to bottom tile in column 3.
+    public Image arrow4; // Points to bottom tile in column 4.
+    public Image arrowRow1; // Points to row 1.
+    public Image arrowRow2; // Points to row 2.
+    public Image arrowScore; // Points to playerScoreText.
+    public Image arrowTimer; // Points to timer.
 
     public Slider timer; // Timer in canvas.
     
@@ -32,6 +36,10 @@ public class Dialogue : MonoBehaviour
         arrow2.gameObject.SetActive(false);
         arrow3.gameObject.SetActive(false);
         arrow4.gameObject.SetActive(false);
+        arrowRow1.gameObject.SetActive(false);
+        arrowRow2.gameObject.SetActive(false);
+        arrowScore.gameObject.SetActive(false);
+        arrowTimer.gameObject.SetActive(false);
 
         dialogueText.text = string.Empty;
         StartDialogue();
@@ -69,7 +77,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void NextLine()
+    public void NextLine()
     {
         if (index < dialogue.Length - 1)
         {
@@ -158,8 +166,66 @@ public class Dialogue : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableA = true;
                 GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableD = true;
                 GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableW = true;
+                GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableMoveColumns = true;
             }
 
+            if (index >= 10)
+            {
+                if (GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().moveColumnsAmount == 0)
+                {
+                    index = 9;
+                }
+
+                else
+                {
+                    if (index == 9)
+                    {
+                        index = 10;
+                    }
+
+                    if (index == 11)
+                    {
+                        arrowRow1.gameObject.SetActive(false);
+                        arrowRow2.gameObject.SetActive(false);
+                        
+                        arrowScore.gameObject.SetActive(true);
+                    }
+
+                    if (index == 12)
+                    {
+                        arrowScore.gameObject.SetActive(false);
+
+                        arrowTimer.gameObject.SetActive(true);
+                    }
+
+                    if (index == 14)
+                    {
+                        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = true;
+                    }
+
+                    if (index >= 15)
+                    {
+                        if (GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().timerEmptyAmount == 0)
+                        {
+                            index = 14;
+                        }
+
+                        else
+                        {
+                            if (index == 14)
+                            {
+                                index = 15;
+                            }
+
+                            if (index == 16)
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
+            
             dialogueText.text = string.Empty;
             StartCoroutine(TypeDialogue());
         }
