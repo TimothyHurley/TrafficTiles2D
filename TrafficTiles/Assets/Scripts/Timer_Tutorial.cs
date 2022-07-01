@@ -10,9 +10,9 @@ public class Timer_Tutorial : MonoBehaviour
 
     public bool enableTimer = false; // Enables timer when true.
     
-    public float maxTime = 10f; // Maximum value of timer.
-    public float remainingTime = 10f; // Current value of timer. Starts equal to maxTime.
-    public float addTime = 7f; // Value added to timer.
+    public float maxTime = 5f; // Maximum value of timer.
+    public float remainingTime = 5f; // Current value of timer. Starts equal to maxTime.
+    public float addTime = 3.5f; // Value added to timer.
 
     public int timerEmptyAmount = 0; // Number of times timer has depleted.
 

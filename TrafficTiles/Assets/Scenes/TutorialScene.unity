@@ -846,9 +846,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 731885688}
   enableTimer: 0
-  maxTime: 10
-  remainingTime: 10
-  addTime: 7
+  maxTime: 5
+  remainingTime: 5
+  addTime: 3.5
   timerEmptyAmount: 0
 --- !u!114 &731885688
 MonoBehaviour:
@@ -1020,6 +1020,9 @@ MonoBehaviour:
   - When the game begins, the timer starts to count down.
   - When the timer has depleted...
   - The game ends!
+  - Make the bottom row of tiles green and watch what that does to the timer.
+  - The timer increased!
+  - Have a go and increase your score to 5.
   textSpeed: 0.04
 --- !u!1 &861218857
 GameObject:

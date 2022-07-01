@@ -182,45 +182,79 @@ public class Dialogue : MonoBehaviour
                     {
                         index = 10;
                     }
+                }
 
-                    if (index == 11)
-                    {
-                        arrowRow1.gameObject.SetActive(false);
-                        arrowRow2.gameObject.SetActive(false);
+                if (index == 11)
+                {
+                    arrowRow1.gameObject.SetActive(false);
+                    arrowRow2.gameObject.SetActive(false);
                         
-                        arrowScore.gameObject.SetActive(true);
+                    arrowScore.gameObject.SetActive(true);
+                }
+
+                if (index == 12)
+                {
+                    arrowScore.gameObject.SetActive(false);
+
+                    arrowTimer.gameObject.SetActive(true);
+                }
+
+                if (index == 14)
+                {
+                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = true;
+                }
+
+                if (index >= 15)
+                {
+                    if (GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().timerEmptyAmount == 0)
+                    {
+                        index = 14;
                     }
 
-                    if (index == 12)
+                    else
                     {
-                        arrowScore.gameObject.SetActive(false);
-
-                        arrowTimer.gameObject.SetActive(true);
-                    }
-
-                    if (index == 14)
-                    {
-                        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = true;
-                    }
-
-                    if (index >= 15)
-                    {
-                        if (GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().timerEmptyAmount == 0)
+                        if (index == 14)
                         {
-                            index = 14;
+                            index = 15;
+                        }
+                    }
+
+                    if (index == 16)
+                    {
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableA = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableD = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableW = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableS = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableMoveColumns = true;
+                    }
+
+                    if (index >= 17)
+                    {
+                        if (GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().moveColumnsAmount == 1)
+                        {
+                            index = 16;
                         }
 
                         else
                         {
-                            if (index == 14)
-                            {
-                                index = 15;
-                            }
-
                             if (index == 16)
                             {
-
+                                index = 17;
                             }
+                        }
+                    }
+
+                    if (index == 18)
+                    {
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableA = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableD = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableW = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableS = true;
+                        GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().enableMoveColumns = true;
+
+                        if (GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().moveColumnsAmount == 3)
+                        {
+                            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = true;
                         }
                     }
                 }
