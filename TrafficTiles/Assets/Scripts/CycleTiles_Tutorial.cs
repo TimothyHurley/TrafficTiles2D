@@ -451,8 +451,17 @@ public class CycleTiles_Tutorial : MonoBehaviour
             enableS = false;
             enableMoveColumns = false;
 
-            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = false;
-            //GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().IncreaseTimerValue();
+            GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().NextLine();
+        }
+
+        if (moveColumnsAmount == 5)
+        {
+            enableA = false;
+            enableD = false;
+            enableW = false;
+            enableS = false;
+            enableMoveColumns = false;
+
             GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().NextLine();
         }
 

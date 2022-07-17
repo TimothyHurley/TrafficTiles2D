@@ -846,7 +846,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 731885688}
   enableTimer: 0
-  timerEmptied: 0
   maxTime: 5
   remainingTime: 5
   addTime: 3.5
@@ -1024,6 +1023,9 @@ MonoBehaviour:
   - Make all 4 tiles green, then look at the timer.
   - The timer has increased!
   - Keep playing until your score reaches 5.
+  - Alright, I think you've got the hang of it.
+  - Head back to the menu and give the real thing a try.
+  - Godspeed!
   textSpeed: 0.03
 --- !u!1 &861218857
 GameObject:
