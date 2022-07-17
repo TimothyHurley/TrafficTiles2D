@@ -9,7 +9,8 @@ public class Timer_Tutorial : MonoBehaviour
     public Slider timer; // Timer in canvas.
 
     public bool enableTimer = false; // Enables timer when true.
-    
+    public bool timerEmptied = false; // True when timer has depleted once.
+
     public float maxTime = 5f; // Maximum value of timer.
     public float remainingTime = 5f; // Current value of timer. Starts equal to maxTime.
     public float addTime = 3.5f; // Value added to timer.
@@ -29,12 +30,25 @@ public class Timer_Tutorial : MonoBehaviour
 
             else
             {
+                remainingTime = 0;
                 timerEmptyAmount++;
+                
                 if (timerEmptyAmount == 1)
                 {
+                    enableTimer = false;
+
                     GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().NextLine();
                     GameObject.FindGameObjectWithTag("Dialogue").GetComponent<Dialogue>().arrowTimer.gameObject.SetActive(false);
                 }
+
+                /*if (timerEmptied == true)
+                {
+                    //remainingTime = addTime;
+
+                    enableTimer = false;
+                    timerEmptied = false;
+                    Debug.Log("hello there, Obi");
+                }*/
             }
         }
     }

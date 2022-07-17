@@ -230,7 +230,7 @@ public class Dialogue : MonoBehaviour
 
                     if (index >= 17)
                     {
-                        if (GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().moveColumnsAmount == 1)
+                        if (GameObject.FindGameObjectWithTag("Cycle").GetComponent<CycleTiles_Tutorial>().moveColumnsAmount <= 1)
                         {
                             index = 16;
                         }
@@ -242,6 +242,12 @@ public class Dialogue : MonoBehaviour
                                 index = 17;
                             }
                         }
+                    }
+
+                    if (index == 17)
+                    {
+                        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = true;
+                        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().timerEmptied = true;
                     }
 
                     if (index == 18)

@@ -846,6 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 731885688}
   enableTimer: 0
+  timerEmptied: 0
   maxTime: 5
   remainingTime: 5
   addTime: 3.5
@@ -1004,26 +1005,26 @@ MonoBehaviour:
   dialogueText: {fileID: 721671119}
   playerScoreText: {fileID: 1467428377}
   dialogue:
-  - Welcome to Traffic Tiles.               Press 'T' to continue.
+  - Welcome to Traffic Tiles.               Press "T" to continue.
   - This is your play space!
-  - Your aim is to make each of these 4 tiles green.
+  - Your goal is to make all 4 tiles green.
   - Tile colours cycle in the order red --> amber --> green --> red.
-  - Press 'A' to cycle the left 2 tiles. Give it a try!
-  - Now press 'D' to cycle the right 2 tiles.
+  - Press "A" to cycle the left 2 tiles. Give it a try!
+  - Now press "D" to cycle the right 2 tiles.
   - Think you've got the hang of it?
-  - Try pressing 'W' to cycle the left 3 tiles.
-  - And 'S' for the right 3 tiles.
-  - Have a go at making all 4 tiles green.
-  - Awesome! Notice each row of tiles moved down 1 row.
-  - And your score increased by 1 point as well.
-  - Now let's have a look at this timer.
-  - When the game begins, the timer starts to count down.
+  - Try pressing "W" to cycle the left 3 tiles.
+  - And "S" for the right 3 tiles.
+  - Use the W, A, S and D keys to make all 4 tiles green.
+  - Awesome! The tiles have all moved down 1 row.
+  - And your score increased by 1 point.
+  - Keep your eyes on this timer.
+  - When a game begins, the timer will start counting down.
   - When the timer has depleted...
   - The game ends!
-  - Make the bottom row of tiles green and watch what that does to the timer.
-  - The timer increased!
-  - Have a go and increase your score to 5.
-  textSpeed: 0.04
+  - Make all 4 tiles green, then look at the timer.
+  - The timer has increased!
+  - Keep playing until your score reaches 5.
+  textSpeed: 0.03
 --- !u!1 &861218857
 GameObject:
   m_ObjectHideFlags: 0
