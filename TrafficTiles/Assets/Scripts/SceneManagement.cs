@@ -6,13 +6,23 @@ using UnityEngine.UI;
 
 public class SceneManagement : MonoBehaviour
 {
-    void Start()
+    public void LoadStartMenuScene()
     {
-        
+        SceneManager.LoadScene("StartMenuScene");
     }
 
-    void Update()
+    public void LoadTutorialScene()
     {
-        
+        SceneManager.LoadScene("TutorialScene");
+    }
+    
+    public void LoadEndMenuScene()
+    {
+        SceneManager.LoadScene("EndMenuScene");
+    }
+
+    public void LoadSampleScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }

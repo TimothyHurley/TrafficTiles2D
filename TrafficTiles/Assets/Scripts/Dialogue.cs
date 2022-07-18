@@ -270,8 +270,6 @@ public class Dialogue : MonoBehaviour
                     {
                         GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer_Tutorial>().enableTimer = false;
                     }
-
-                    //if (index == 21)
                 }
             }
             
@@ -281,7 +279,8 @@ public class Dialogue : MonoBehaviour
 
         else
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Scene").GetComponent<SceneManagement>().LoadStartMenuScene();
         }
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 3440
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 760
     width: 2627
     height: 547
-  m_MinSize: {x: 431, y: 271}
-  m_MaxSize: {x: 14001, y: 10021}
+  m_MinSize: {x: 433, y: 271}
+  m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 58
+  controlID: 18
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,10 +96,10 @@ MonoBehaviour:
     y: 30
     width: 3440
     height: 1307
-  m_MinSize: {x: 707, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 79
+  controlID: 83
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,10 +274,10 @@ MonoBehaviour:
     y: 0
     width: 2627
     height: 1307
-  m_MinSize: {x: 431, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 433, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 88
+  controlID: 57
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 89
+  controlID: 58
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,21 +367,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\timot\Desktop\GitGood\TrafficTiles2D\TrafficTiles
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee400000
-    m_LastClickedID: 16622
+    m_SelectedIDs: ec400000
+    m_LastClickedID: 16620
     m_ExpandedIDs: 00000000e640000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -533,7 +533,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 40fbffffdc3f0000
+      m_ExpandedIDs: 3ccfffff34d3ffff70d3ffff70d6fffff2d6ffff7cddffffb2e1ffffd2e2ffffe6e2fffffce2ffff30e3ffff56e3ffff28e4ffff74e4ffff94e4ffffa6e4ffffc8e4ffff10e5ffff24e5ffff48e5ffffc8e5ffff16e6ffff40e6ffff52e6ffff64e6ffff76e6ffff92e7fffffae8ffff00e9ffff04e9ffff1ae9ffff3ae9ffffc4e9ffff08eaffffd2eaffff2cebffff50edffffb4efffff04f3ffff08f3ffff1af3ffff1af5ffff98f5ffffcaf5ffffe0f5ffff0cf6ffff76f8ffffbcf8fffffcf8ffff9cfaffff40fbffff5e4200005c500000d8510000f25100007a52000096520000c0520000da5200003e5300005a530000845300009e53000092570000545c00001e5e0000c45e0000a6640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -593,9 +593,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 960, y: 190, z: 0}
+    m_Target: {x: -3.335147, y: 0.7495485, z: -0.24618196}
     speed: 2
-    m_Value: {x: 960, y: 190, z: 0}
+    m_Value: {x: -3.335147, y: 0.7495485, z: -0.24618196}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -646,9 +646,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 516.62366
+    m_Target: 12.46182
     speed: 2
-    m_Value: 516.62366
+    m_Value: 12.46182
   m_Ortho:
     m_Target: 1
     speed: 2

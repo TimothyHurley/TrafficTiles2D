@@ -18,5 +18,30 @@ public class PlayerScore : MonoBehaviour
     {
         playerScore++;
         playerScoreText.text = ("" + playerScore);
+
+        if (playerScore == 5)
+        {
+            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().ReduceMaxTime();
+        }
+
+        if (playerScore == 15)
+        {
+            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().ReduceMaxTime();
+        }
+
+        if (playerScore == 25)
+        {
+            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().ReduceMaxTime();
+        }
+
+        if (playerScore == 35)
+        {
+            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().ReduceMaxTime();
+        }
+
+        if (playerScore == 45)
+        {
+            GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().ReduceMaxTime();
+        }
     }
 }

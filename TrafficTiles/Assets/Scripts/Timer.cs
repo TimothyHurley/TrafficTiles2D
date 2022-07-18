@@ -21,10 +21,10 @@ public class Timer : MonoBehaviour
             timer.value = remainingTime / maxTime;
         }
 
-        /*else
+        else
         {
-            SceneManager.LoadScene("");
-        }*/
+            GameObject.FindGameObjectWithTag("Scene").GetComponent<SceneManagement>().LoadEndMenuScene();
+        }
     }
 
     public void IncreaseTimerValue()
@@ -35,5 +35,11 @@ public class Timer : MonoBehaviour
         {
             remainingTime = maxTime;
         }
+    }
+
+    public void ReduceMaxTime()
+    {
+        maxTime = maxTime - 1f;
+        Debug.Log("maxTime = " + maxTime);
     }
 }
