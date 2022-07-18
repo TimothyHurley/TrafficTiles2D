@@ -17,6 +17,7 @@ TagManager:
   - Score
   - Dialogue
   - Scene
+  - HighScore
   layers:
   - Default
   - TransparentFX

@@ -1,17 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
     public Text playerScoreText;
 
-    public int playerScore = 0;
+    public static int playerScore = 0;
 
     void Start()
     {
-        playerScoreText.text = ("" + playerScore);
+        if (SceneManager.GetActiveScene().name == "EndMenuScene")
+        {
+            playerScoreText.text = ("Score: " + playerScore);
+        }
+        
+        else
+        {
+            playerScoreText.text = ("" + playerScore);
+        }
     }
     
     public void IncreasePlayerScore()

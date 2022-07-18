@@ -13,6 +13,7 @@ public class SceneManagement : MonoBehaviour
 
     public void LoadTutorialScene()
     {
+        PlayerScore.playerScore = 0;
         SceneManager.LoadScene("TutorialScene");
     }
     
@@ -23,6 +24,7 @@ public class SceneManagement : MonoBehaviour
 
     public void LoadSampleScene()
     {
+        PlayerScore.playerScore = 0;
         SceneManager.LoadScene("SampleScene");
     }
 }
