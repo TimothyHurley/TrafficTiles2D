@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eaab718ca22613418b2d9bcd72fa541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greenTileDown: {fileID: 3240804898591562803}
+  tileFall: {fileID: 3240804898591562803}
 --- !u!95 &3240804898591562803
 Animator:
   serializedVersion: 3

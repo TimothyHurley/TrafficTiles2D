@@ -7,6 +7,8 @@ public class CycleTiles : MonoBehaviour
     public GameObject[] tiles; // Tile prefabs.
     public GameObject[] columns; // Column game objects.
 
+    [SerializeField] private Animator cameraShake;
+
     public List<GameObject> clones1 = new List<GameObject>(); // List of tiles in column 1.
     public List<GameObject> clones2 = new List<GameObject>(); // List of tiles in column 2.
     public List<GameObject> clones3 = new List<GameObject>(); // List of tiles in column 3.
@@ -29,6 +31,7 @@ public class CycleTiles : MonoBehaviour
     public bool amber4 = false;
     public bool green4 = false;
 
+    public int cameraShakeVariant = 0;
     public int elementsPerList = 5; // Maximum number of elements in a list.
     
     
@@ -409,6 +412,18 @@ public class CycleTiles : MonoBehaviour
         green3 = false;
         green4 = false;
 
+        cameraShakeVariant = Random.Range(0, 1);
+        
+        if (cameraShakeVariant == 0)
+        {
+            cameraShake.Play("CameraShake_1");
+        }
+
+        if (cameraShakeVariant == 1)
+        {
+            cameraShake.Play("CameraShake_2");
+        }
+
         for (int i = 0; i < elementsPerList; i++)
         {
             clones1[i].GetComponent<MoveTiles>().MoveThisGameObject();
@@ -417,25 +432,9 @@ public class CycleTiles : MonoBehaviour
             clones4[i].GetComponent<MoveTiles>().MoveThisGameObject();
         }
 
-        //GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().IncreaseTimerValue();
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().IncreaseTimerValue();
         
-        if (PlayerScore.playerScore == 0)
-        {
-            Vector2 spawnpoint1 = new Vector2(0, -7);
-            Instantiate(tiles[2], spawnpoint1, Quaternion.identity);
-
-            Vector2 spawnpoint2 = new Vector2(6, -7);
-            Instantiate(tiles[2], spawnpoint2, Quaternion.identity);
-
-            Vector2 spawnpoint3 = new Vector2(12, -7);
-            Instantiate(tiles[2], spawnpoint3, Quaternion.identity);
-
-            Vector2 spawnpoint4 = new Vector2(18, -7);
-            Instantiate(tiles[2], spawnpoint4, Quaternion.identity);
-        }
-
         GameObject.FindGameObjectWithTag("Score").GetComponent<PlayerScore>().IncreasePlayerScore();
-
         
         clones1.RemoveAt(0);
         clones2.RemoveAt(0);

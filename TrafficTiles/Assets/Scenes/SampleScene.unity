@@ -351,6 +351,7 @@ MonoBehaviour:
   - {fileID: 1527959681}
   - {fileID: 1222345776}
   - {fileID: 1048077420}
+  cameraShake: {fileID: 519420030}
   clones1: []
   clones2: []
   clones3: []
@@ -367,6 +368,7 @@ MonoBehaviour:
   red4: 0
   amber4: 0
   green4: 0
+  cameraShakeVariant: 0
   elementsPerList: 5
 --- !u!1 &265476653
 GameObject:
@@ -572,6 +574,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -587,6 +590,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!95 &519420030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9f980af637f2a8448b178f4fe7e7d04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -902,7 +924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScoreText: {fileID: 1074168873}
-  playerScore: 0
 --- !u!114 &1074168873
 MonoBehaviour:
   m_ObjectHideFlags: 0
