@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 208156653185080911}
   - component: {fileID: 5361847062657796102}
   - component: {fileID: 846934042017351678}
+  - component: {fileID: 8514915107303418137}
   m_Layer: 0
   m_Name: Tile_Green
   m_TagString: Green
@@ -95,3 +96,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eaab718ca22613418b2d9bcd72fa541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  greenTileDown: {fileID: 8514915107303418137}
+--- !u!95 &8514915107303418137
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197442454473737465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 949b6b1e0f516024eb6b036642751fb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
