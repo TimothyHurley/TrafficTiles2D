@@ -418,8 +418,24 @@ public class CycleTiles : MonoBehaviour
         }
 
         //GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().IncreaseTimerValue();
+        
+        if (PlayerScore.playerScore == 0)
+        {
+            Vector2 spawnpoint1 = new Vector2(0, -7);
+            Instantiate(tiles[2], spawnpoint1, Quaternion.identity);
+
+            Vector2 spawnpoint2 = new Vector2(6, -7);
+            Instantiate(tiles[2], spawnpoint2, Quaternion.identity);
+
+            Vector2 spawnpoint3 = new Vector2(12, -7);
+            Instantiate(tiles[2], spawnpoint3, Quaternion.identity);
+
+            Vector2 spawnpoint4 = new Vector2(18, -7);
+            Instantiate(tiles[2], spawnpoint4, Quaternion.identity);
+        }
 
         GameObject.FindGameObjectWithTag("Score").GetComponent<PlayerScore>().IncreasePlayerScore();
+
         
         clones1.RemoveAt(0);
         clones2.RemoveAt(0);

@@ -6,6 +6,7 @@ public class MoveTiles : MonoBehaviour
 {
     [SerializeField] private Animator greenTileDown;
 
+
     public void MoveThisGameObject()
     {
         if (this.gameObject.tag == "Red")
@@ -50,6 +51,27 @@ public class MoveTiles : MonoBehaviour
             if (transform.position.x == 18 && transform.position.y == 14)
             {
                 greenTileDown.Play("c4-r3");
+            }
+            
+            // Below code animates red tiles in row 4.
+            if (transform.position.x == 0 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c1-r4");
+            }
+
+            if (transform.position.x == 6 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c2-r4");
+            }
+
+            if (transform.position.x == 12 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c3-r4");
+            }
+
+            if (transform.position.x == 18 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c4-r4");
             }
         }
 
@@ -96,6 +118,27 @@ public class MoveTiles : MonoBehaviour
             {
                 greenTileDown.Play("c4-r3");
             }
+            
+            // Below code animates amber tiles in row 4.
+            if (transform.position.x == 0 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c1-r4");
+            }
+
+            if (transform.position.x == 6 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c2-r4");
+            }
+
+            if (transform.position.x == 12 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c3-r4");
+            }
+
+            if (transform.position.x == 18 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c4-r4");
+            }
         }
 
         if (this.gameObject.tag == "Green")
@@ -104,21 +147,25 @@ public class MoveTiles : MonoBehaviour
             if (transform.position.x == 0 && transform.position.y == 0)
             {
                 greenTileDown.Play("c1-r1");
+                Destroy(this.gameObject);
             }
 
             if (transform.position.x == 6 && transform.position.y == 0)
             {
                 greenTileDown.Play("c2-r1");
+                Destroy(this.gameObject);
             }
 
             if (transform.position.x == 12 && transform.position.y == 0)
             {
                 greenTileDown.Play("c3-r1");
+                Destroy(this.gameObject);
             }
 
             if (transform.position.x == 18 && transform.position.y == 0)
             {
                 greenTileDown.Play("c4-r1");
+                Destroy(this.gameObject);
             }
 
             // Below code animates green tiles in row 2.
@@ -162,13 +209,27 @@ public class MoveTiles : MonoBehaviour
             {
                 greenTileDown.Play("c4-r3");
             }
+
+            // Below code animates green tiles in row 4.
+            if (transform.position.x == 0 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c1-r4");
+            }
+
+            if (transform.position.x == 6 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c2-r4");
+            }
+
+            if (transform.position.x == 12 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c3-r4");
+            }
+
+            if (transform.position.x == 18 && transform.position.y == 21)
+            {
+                greenTileDown.Play("c4-r4");
+            }
         }
-
-        //transform.position = new Vector2(transform.position.x, transform.position.y - 7);
-
-        /*if (transform.position.y < 0)
-        {
-            Destroy(this.gameObject);
-        }*/
     }
 }
