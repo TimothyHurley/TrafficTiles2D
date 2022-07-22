@@ -31,7 +31,7 @@ public class CycleTiles : MonoBehaviour
     public bool amber4 = false;
     public bool green4 = false;
 
-    public int cameraShakeVariant = 0;
+    public int cameraShakeVariant;
     public int elementsPerList = 5; // Maximum number of elements in a list.
     
     
@@ -412,17 +412,7 @@ public class CycleTiles : MonoBehaviour
         green3 = false;
         green4 = false;
 
-        cameraShakeVariant = Random.Range(0, 1);
-        
-        if (cameraShakeVariant == 0)
-        {
-            cameraShake.Play("CameraShake_1");
-        }
-
-        if (cameraShakeVariant == 1)
-        {
-            cameraShake.Play("CameraShake_2");
-        }
+        AnimateCameraShake();
 
         for (int i = 0; i < elementsPerList; i++)
         {
@@ -472,5 +462,33 @@ public class CycleTiles : MonoBehaviour
         {
             clones4.RemoveAt(elementsPerList);
         }
+    }
+
+    void AnimateCameraShake()
+    {
+        if (cameraShakeVariant == 0)
+        {
+            cameraShake.Play("CameraShake_1");
+            cameraShakeVariant = 1;
+        }
+
+        if (cameraShakeVariant == 1)
+        {
+            cameraShake.Play("CameraShake_2");
+            cameraShakeVariant = 0;
+        }
+
+        /*cameraShakeVariant = Random.Range(0, 2);
+        Debug.Log(cameraShakeVariant);
+
+        if (cameraShakeVariant == 0)
+        {
+            cameraShake.Play("CameraShake_1");
+        }
+
+        if (cameraShakeVariant == 1)
+        {
+            cameraShake.Play("CameraShake_2");
+        }*/
     }
 }
